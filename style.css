@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:focus {
+    outline: 1px dashed white;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    color: #fafafa;
+    text-shadow: -1px 0 #404040, 0 1px #404040, 1px 0 #404040, 0 -1px #404040;
+    transition: background-image 1s ease-in-out 300ms;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80%;
+    width: 80%;
+    background-color: rgba(26, 26, 26, 0.59);
+    /*background: linear-gradient(0deg, rgba(46,32,62,0.5158438375350141) 0%, rgba(255,143,74,0.5046393557422969) 100%);*/
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 40px 20px 60px;
+}
+
+.weather {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.city {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.temperature {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.weather-description {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.humidity {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.wind {
+    font-size: 12px;
+}
+
+#date {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.time {
+    font-size: 8rem;
+    font-weight: 700;
+    display: flex;
+    transform: scale(0.7);
+}
+
+.time span {
+    min-width: 168px;
+}
+
+
+h1 {
+    margin-bottom: 45px;
+    display: flex;
+}
+
+#name {
+    min-width: 100px;
+    display: block;
+    margin-left: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.aim-question {
+    font-size: 1.5em;
+}
+
+#focus {
+    min-width: 100px;
+    margin-bottom: 40px;
+}
+
+.button {
+    background-color: #595c5ba6;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Comfortaa', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+.button:hover {
+    background-color: rgba(89, 92, 91, 0.9);
+}
+
+.button[disabled] {
+    /*background-color: rgba(248, 252, 251, 0.56);*/
+    /*opacity: 0.9;*/
+    /*cursor: auto;*/
+}
+
+@media (max-width: 800px) {
+    .time {
+        font-size: 5rem;
+    }
+
+    .time span {
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 570px) {
+    .wrap {
+        height: 90%;
+        width: 90%;
+    }
+
+    .time {
+        font-size: 4rem;
+    }
+
+    .time span {
+        min-width: 80px;
+    }
+
+    #greeting,
+    #name {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
