@@ -130,11 +130,19 @@ function setBgGreet() {
                 document.body.style.backgroundImage = images[indexImg];
             }
 
-
             setTimeout(function() { btn.disabled = false }, 1300);
         }
+    });
 
-    })
+    //гзвфеу
+    let current = new Date();
+    let future = new Date();
+    future.setTime(future.getTime() + 3600000); //3600000 = 1 hour
+    future.setMinutes(0);
+    future.setSeconds(0);
+
+    let timeout = (future.getTime() - current.getTime());
+    setTimeout(setBgGreet, timeout);
 }
 
 //Get name
