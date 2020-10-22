@@ -28,7 +28,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 80%;
+    width: min(80%, 1000px);
     background-color: rgba(26, 26, 26, 0.59);
     /* background: linear-gradient(0deg, rgba(46,32,62,0.5158438375350141) 0%, rgba(255,143,74,0.5046393557422969) 100%); */
     border-radius: 20px;
