@@ -201,7 +201,7 @@ body {
     .quote {
         font-size: 18px;
         min-height: 147px;
-        max-width: 90%;
+        width: 90%;
     }
 
     .greeting {
@@ -217,12 +217,13 @@ body {
     .wrap {
         height: 90%;
         width: 90%;
+        padding: 50px 10px 90px;
     }
 
     .quote {
         font-size: 16px;
         min-height: 160px;
-        max-width: 100%;
+        width: 100%;
     }
 
     .weather__city {
