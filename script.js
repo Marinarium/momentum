@@ -115,7 +115,6 @@ function setBgGreet() {
         document.body.style.backgroundImage = images[today.getHours()];
         greeting.textContent = "Добрый вечер,"
     }
-    console.log(images);
 
     let indexImg = today.getHours();
     btn.addEventListener("click", function (event) {
