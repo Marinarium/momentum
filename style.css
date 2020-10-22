@@ -41,65 +41,69 @@ body {
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: 300;
+    min-height: 98px;
 }
 
-.city {
+.weather__city {
     font-size: 24px;
     margin-bottom: 10px;
     font-weight: normal;
     min-width: 100px;
 }
 
-.temperature {
+.weather__temperature {
     display: inline-block;
     margin-right: 5px;
     margin-bottom: 5px;
 }
 
-.weather-description {
+.weather__description {
     display: inline-block;
-    font-size: 14px;
-    vertical-align: middle;
-}
-
-.humidity {
     font-size: 14px;
     margin-bottom: 5px;
 }
 
-.wind {
+.weather__humidity {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.weather__wind {
     font-size: 14px;
 }
 
-.error-message {
+.weather__error-message {
     font-size: 14px;
     margin-top: -15px;
     margin-bottom: 15px;
 }
 
-#date {
-    font-size: 1.5rem;
+.date {
+    font-size: 24px;
     margin-bottom: 16px;
 }
 
 .time {
-    font-size: 8rem;
+    font-size: 70px;
     font-weight: 700;
     display: flex;
-    transform: scale(0.7);
+    margin-bottom: 10px;
 }
 
 .time span {
-    min-width: 168px;
+    min-width: 100px;
 }
 
-
-h1 {
+.greeting {
+    font-size: 28px;
     margin-bottom: 25px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 1.2;
 }
 
-#name {
+.greeting__name {
     min-width: 100px;
     display: block;
     margin-left: 10px;
@@ -109,13 +113,13 @@ h1 {
     font-family: 'Bad Script', cursive;
     font-size: 20px;
     margin-bottom: 10px;
-    max-width: 70%;
+    width: 70%;
     text-align: right;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-start;
-    min-height: 87px;
+    min-height: 111px;
 }
 
 .quote__btn {
@@ -123,7 +127,7 @@ h1 {
     border: none;
     margin-top: -5px;
     cursor: pointer;
-    transition-duration: 350ms;
+    transition-duration: 450ms;
     flex-basis: 30px;
     margin-right: 10px;
 }
@@ -133,7 +137,7 @@ h1 {
 }
 
 .quote__btn:disabled {
-    transform: rotate(-360deg);
+    opacity: 0.3;
 }
 
 
@@ -153,21 +157,23 @@ h1 {
     padding-right: 5px;
 }
 
-h2 {
-    margin-bottom: 10px;
+.aim {
     opacity: 0.9;
-}
-
-.aim-question {
     font-size: 20px;
     font-weight: 400;
 }
 
-#focus {
+.aim__question {
+    margin-bottom: 10px;
+}
+
+.aim__answer {
     min-width: 100px;
     margin-bottom: 40px;
-    font-size: 20px;
-    font-weight: 400;
+    max-width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 69px;
 }
 
 .button {
@@ -187,18 +193,22 @@ h2 {
 }
 
 .button[disabled] {
-    /*background-color: rgba(248, 252, 251, 0.56);*/
-    /*opacity: 0.9;*/
-    /*cursor: auto;*/
+    opacity: 0.5;
 }
 
-@media (max-width: 800px) {
-    .time {
-        font-size: 5rem;
+@media (max-width: 1024px) {
+    .quote {
+        font-size: 18px;
+        min-height: 147px;
+        max-width: 90%;
     }
 
-    .time span {
-        min-width: 100px;
+    .greeting {
+        font-size: 24px;
+    }
+
+    .aim {
+        font-size: 18px;
     }
 }
 
@@ -208,24 +218,38 @@ h2 {
         width: 90%;
     }
 
+    .quote {
+        font-size: 16px;
+        min-height: 160px;
+        max-width: 100%;
+    }
+
+    .weather__city {
+        font-size: 20px;
+    }
+
+    .date {
+        font-size: 20px;
+    }
+
     .time {
-        font-size: 4rem;
+        font-size: 60px;
     }
 
     .time span {
         min-width: 80px;
     }
 
-    #greeting,
-    #name {
-        font-size: 2rem;
+    .greeting {
+        font-size: 20px;
+        min-height: 72px;
     }
 
-    h1 {
-        font-size: 2rem;
+    .aim {
+        font-size: 16px;
     }
 
-    h2 {
-        font-size: 1.5rem;
+    .aim__answer {
+        min-height: 72px;
     }
 }

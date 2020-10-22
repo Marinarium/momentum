@@ -18,28 +18,29 @@
     <p class="quote__author"></p>
   </div>
   <div class="weather">
-    <div class="city" contenteditable="true"></div>
+    <div class="weather__city" contenteditable="true"></div>
     <i class="weather-icon owf"></i>
-    <div class="temperature"></div>
-    <div class="weather-description"></div>
-    <div class="humidity"></div>
-    <div class="wind"></div>
-    <div class="error-message"></div>
+    <div class="weather__temperature"></div>
+    <div class="weather__description"></div>
+    <div class="weather__humidity"></div>
+    <div class="weather__wind"></div>
+    <div class="weather__error-message"></div>
   </div>
-  <div id="date">
+  <div class="date" id="date">
   </div>
   <div class="time">
-    <span id="hours"></span>:
-    <span id="mins"></span>:
-    <span id="secs"></span>
+    <span class="time__hours" id="hours"></span>:
+    <span class="time__mins" id="mins"></span>:
+    <span class="time__secs" id="secs"></span>
   </div>
-  <h1>
-    <span id="greeting"></span>
-    <span id="name" contenteditable="true"></span>
+  <h1 class="greeting">
+    <span class="greeting__text" id="greeting"></span>
+    <span class="greeting__name" id="name" contenteditable="true"></span>
   </h1>
-
-  <h2 class="aim-question">Какую цель ты выберешь на сегодня?</h2>
-  <h2 id="focus" contenteditable="true"></h2>
+  <div class="aim">
+    <p class="aim__question">Какую цель ты выберешь на сегодня?</p>
+    <p class="aim__answer" id="focus" contenteditable="true"></p>
+  </div>
   <button id="button" class="button" type="button">Следующая картинка</button>
   <script src="script.js"></script>
 </div>

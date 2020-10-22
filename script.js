@@ -244,13 +244,13 @@ focus.addEventListener('blur', setFocus);
 
 
 //Weather
-const city = document.querySelector('.city');
+const city = document.querySelector('.weather__city');
 const weatherIcon = document.querySelector('.weather-icon');
-const temperature = document.querySelector('.temperature');
-const weatherDescription = document.querySelector('.weather-description');
-const humidity = document.querySelector('.humidity');
-const wind = document.querySelector('.wind');
-const errorMessage = document.querySelector('.error-message');
+const temperature = document.querySelector('.weather__temperature');
+const weatherDescription = document.querySelector('.weather__description');
+const humidity = document.querySelector('.weather__humidity');
+const wind = document.querySelector('.weather__wind');
+const errorMessage = document.querySelector('.weather__error-message');
 
 async function getWeather() {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&lang=ru&appid=33144909d877076f1ae4df04b094c978&units=metric`;
@@ -358,8 +358,6 @@ async function getQuote() {
     }
 
 }
-
-
 
 btnQuote.addEventListener("click", function (event) {
     btnQuote.disabled = true;
