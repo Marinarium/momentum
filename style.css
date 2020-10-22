@@ -8,6 +8,16 @@
     outline: 1px dashed white;
 }
 
+.editable {
+    transition-duration: 500ms;
+    border-radius: 5px;
+}
+
+.editable:hover {
+    cursor: pointer;
+    background-color: rgba(64, 64, 64, 0.48);
+}
+
 body {
     font-family: 'Comfortaa', sans-serif;
     font-weight: normal;
@@ -165,7 +175,7 @@ body {
 }
 
 .aim__question {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .aim__answer {
@@ -175,6 +185,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     min-height: 69px;
+    padding-top: 5px;
 }
 
 .button {
