@@ -130,7 +130,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    min-height: 111px;
+    min-height: 135px;
 }
 
 .quote__btn {
