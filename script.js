@@ -10,33 +10,33 @@ const btn = document.getElementById('button');
 
 //Array of images
 const images = [
-    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')",
+    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //0
+    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //1
+    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //2
+    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //3
+    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //4
+    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //5
 
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')",
+    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //6
+    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //7
+    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //8
+    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //9
+    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //10
+    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //11
 
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')",
+    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //12
+    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //13
+    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //14
+    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //15
+    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //16
+    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //17
 
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')",
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')"
+    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')", //18
+    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')", //19
+    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')", //20
+    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')", //21
+    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')", //22
+    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')"  //23
 ]
 
 //Show time
@@ -134,7 +134,7 @@ function setBgGreet() {
         }
     });
 
-    //гзвфеу
+    //update every new hour
     let current = new Date();
     let future = new Date();
     future.setTime(future.getTime() + 3600000); //3600000 = 1 hour
@@ -166,7 +166,7 @@ function setName(e) {
     if(e.type === "keypress") {
         //Make sure enter is pressed
         if(e.which == 13){
-            if(name.textContent) {
+            if(name.textContent && name.textContent.trim()) {
                 localStorage.setItem('name', e.target.innerText);
                 name.blur();
             } else {
@@ -174,18 +174,18 @@ function setName(e) {
                 name.blur();
             }
 
-            if(localStorage.getItem('name') === null){
+            if(localStorage.getItem('name') === null || !name.textContent.trim()){
                 name.textContent = '[как тебя называть?]';
             }
         }
     } else {
-        if(name.textContent) {
+        if(name.textContent && name.textContent.trim()) {
             localStorage.setItem('name', e.target.innerText);
         } else {
             name.textContent = localStorage.getItem('name');
         }
 
-        if(localStorage.getItem('name') === null){
+        if(localStorage.getItem('name') === null || !name.textContent.trim()){
             name.textContent = '[как тебя называть?]';
         }
     }
@@ -212,24 +212,24 @@ function setFocus(e) {
     if(e.type === "keypress") {
         //Make sure enter is pressed
         if(e.which == 13){
-            if(!(focus.textContent == "")) {
+            if(focus.textContent && focus.textContent.trim()) {
                 localStorage.setItem('focus', e.target.innerText);
                 focus.blur();
             } else {
                 focus.textContent = localStorage.getItem('focus');
                 focus.blur();
             }
-            if(localStorage.getItem('focus') === null){
+            if(localStorage.getItem('focus') === null || !focus.textContent.trim()){
                 focus.textContent = '[Выберешь цель?]';
             }
         }
     } else {
-        if(!(focus.textContent == "")) {
+        if(focus.textContent && focus.textContent.trim()) {
             localStorage.setItem('focus', e.target.innerText);
         } else {
             focus.textContent = localStorage.getItem('focus');
         }
-        if(localStorage.getItem('focus') === null){
+        if(localStorage.getItem('focus') === null || !focus.textContent.trim()){
             focus.textContent = '[Выберешь цель?]';
         }
     }
@@ -251,32 +251,125 @@ const temperature = document.querySelector('.temperature');
 const weatherDescription = document.querySelector('.weather-description');
 const humidity = document.querySelector('.humidity');
 const wind = document.querySelector('.wind');
+const errorMessage = document.querySelector('.error-message');
 
 async function getWeather() {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&lang=ru&appid=08f2a575dda978b9c539199e54df03b0&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&lang=ru&appid=33144909d877076f1ae4df04b094c978&units=metric`;
     const res = await fetch(url);
-    const data = await res.json();
-    console.log(data.weather[0].id, data.weather[0].description, data.main.temp, data.main.humidity, data.wind.speed);
+    if(res.ok){
+        const data = await res.json();
+        weatherIcon.className = 'weather-icon owf';
+        weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+        temperature.textContent = `${data.main.temp}°C`;
+        weatherDescription.textContent = data.weather[0].description;
+        humidity.textContent = `влажность ${data.main.humidity}%`;
+        wind.textContent = `ветер ${data.wind.speed} м/с`;
+        errorMessage.textContent = '';
+    } else if (!(res.ok) && localStorage.getItem('city')) {
+        weatherIcon.className = '';
+        temperature.textContent = '';
+        weatherDescription.textContent = '';
+        humidity.textContent = '';
+        wind.textContent = '';
+        errorMessage.textContent = `${localStorage.getItem('name') ? localStorage.getItem('name') : 'Друг'}, что-то пошло не так...`
+    } else  {
+        weatherIcon.className = '';
+        temperature.textContent = '';
+        weatherDescription.textContent = '';
+        humidity.textContent = '';
+        wind.textContent = '';
+        errorMessage.textContent = '';
+    }
 
-    weatherIcon.className = 'weather-icon owf';
-    weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-    temperature.textContent = `${data.main.temp}°C`;
-    weatherDescription.textContent = data.weather[0].description;
-    humidity.textContent = `влажность ${data.main.humidity}%`;
-    wind.textContent = `ветер ${data.wind.speed} км/ч`;
+    setTimeout(getWeather, 3600000);
 }
 
-function setCity(event) {
-    if (event.code === 'Enter') {
-        getWeather();
-        city.blur();
+//Get city
+function getCity() {
+    if(localStorage.getItem('city') === null){
+        city.textContent = '[В каком городе посмотреть погоду?]';
+    } else {
+        city.textContent = localStorage.getItem('city');
+        //getWeather();
     }
 }
 
-document.addEventListener('DOMContentLoaded', getWeather);
-city.addEventListener('keypress', setCity);
+//Clean city
+function cleanCity(e) {
+    if(e.type === "focus"){
+        city.textContent = '';
+    }
+}
 
-//getWeather();
+//Set city
+function setCity(e) {
+    if(e.type === "keypress") {
+        //Make sure enter is pressed
+        if(e.which == 13){
+            if(city.textContent && city.textContent.trim()) {
+                localStorage.setItem('city', e.target.innerText);
+                city.blur();
+                getWeather();
+            } else {
+                city.textContent = localStorage.getItem('city');
+                city.blur();
+                getWeather();
+            }
+
+            if(localStorage.getItem('city') === null || !city.textContent.trim()){
+                city.textContent = '[В каком городе посмотреть погоду?]';
+            }
+        }
+    } else {
+        if(city.textContent && city.textContent.trim()) {
+            localStorage.setItem('city', e.target.innerText);
+            getWeather();
+        } else {
+            city.textContent = localStorage.getItem('city');
+            getWeather();
+        }
+
+        if(localStorage.getItem('city') === null || !city.textContent.trim()){
+            city.textContent = '[В каком городе посмотреть погоду?]';
+        }
+    }
+}
+
+//City
+document.addEventListener('DOMContentLoaded', getWeather);
+city.addEventListener('focus', cleanCity);
+city.addEventListener('keypress', setCity);
+city.addEventListener('blur', setCity);
+
+//Quote
+const quote = document.querySelector('.quote__text');
+const author = document.querySelector('.quote__author');
+const btnQuote = document.querySelector('.quote__btn');
+
+async function getQuote() {
+    const url = `https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=ru`;
+    const res = await fetch(url);
+
+    if(res.ok){
+        const data = await res.json();
+        quote.textContent = data.quoteText;
+        author.textContent = data.quoteAuthor;
+    } else {
+        quote.textContent = "Что-то пошло не так. Попробуй получить цитату позже"
+    }
+
+}
+
+
+
+btnQuote.addEventListener("click", function (event) {
+    btnQuote.disabled = true;
+    if (btnQuote.contains(event.target)) {
+        getQuote();
+        setTimeout(function() { btnQuote.disabled = false }, 1300);
+    }
+});
+document.addEventListener('DOMContentLoaded', getQuote);
 
 //Run
 showTime();
@@ -284,4 +377,4 @@ showDate();
 setBgGreet();
 getName();
 getFocus();
-
+getCity();
