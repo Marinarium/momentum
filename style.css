@@ -66,7 +66,7 @@ body {
     margin-bottom: 20px;
     font-size: 14px;
     font-weight: 300;
-    min-height: 98px;
+    min-height: 100px;
 }
 
 .weather__city {
@@ -181,6 +181,7 @@ body {
 
 .aim {
     font-size: 14px;
+    line-height: 1.25;
     font-weight: 300;
     margin-bottom: 20px;
 }
@@ -229,10 +230,6 @@ body {
     .greeting {
         font-size: 24px;
     }
-
-    .aim {
-        font-size: 18px;
-    }
 }
 
 @media (max-width: 570px) {
@@ -242,8 +239,8 @@ body {
     }
 
     .quote {
-        font-size: 16px;
-        min-height: 160px;
+        font-size: 14px;
+        min-height: 164px;
         width: 100%;
     }
 
@@ -269,7 +266,7 @@ body {
     }
 
     .aim {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .aim__answer {

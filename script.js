@@ -10,33 +10,33 @@ const btn = document.getElementById('button');
 
 //Array of images
 const images = [
-    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //0
-    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //1
-    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //2
-    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //3
-    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //4
-    "url('assets/images/night/"+addZero(randomInteger(1, 20))+".jpg')", //5
+    "url('assets/images/night/"+addZero(randomInteger(1, 30))+".jpg')", //0
+    "url('assets/images/night/"+addZero(randomInteger(1, 30))+".jpg')", //1
+    "url('assets/images/night/"+addZero(randomInteger(1, 30))+".jpg')", //2
+    "url('assets/images/night/"+addZero(randomInteger(1, 30))+".jpg')", //3
+    "url('assets/images/night/"+addZero(randomInteger(1, 30))+".jpg')", //4
+    "url('assets/images/night/"+addZero(randomInteger(1, 30))+".jpg')", //5
 
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //6
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //7
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //8
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //9
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //10
-    "url('assets/images/morning/"+addZero(randomInteger(1, 20))+".jpg')", //11
+    "url('assets/images/morning/"+addZero(randomInteger(1, 30))+".jpg')", //6
+    "url('assets/images/morning/"+addZero(randomInteger(1, 30))+".jpg')", //7
+    "url('assets/images/morning/"+addZero(randomInteger(1, 30))+".jpg')", //8
+    "url('assets/images/morning/"+addZero(randomInteger(1, 30))+".jpg')", //9
+    "url('assets/images/morning/"+addZero(randomInteger(1, 30))+".jpg')", //10
+    "url('assets/images/morning/"+addZero(randomInteger(1, 30))+".jpg')", //11
 
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //12
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //13
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //14
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //15
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //16
-    "url('assets/images/day/"+addZero(randomInteger(1, 20))+".jpg')", //17
+    "url('assets/images/day/"+addZero(randomInteger(1, 30))+".jpg')", //12
+    "url('assets/images/day/"+addZero(randomInteger(1, 30))+".jpg')", //13
+    "url('assets/images/day/"+addZero(randomInteger(1, 30))+".jpg')", //14
+    "url('assets/images/day/"+addZero(randomInteger(1, 30))+".jpg')", //15
+    "url('assets/images/day/"+addZero(randomInteger(1, 30))+".jpg')", //16
+    "url('assets/images/day/"+addZero(randomInteger(1, 30))+".jpg')", //17
 
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')", //18
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')", //19
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')", //20
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')", //21
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')", //22
-    "url('assets/images/evening/"+addZero(randomInteger(1, 20))+".jpg')"  //23
+    "url('assets/images/evening/"+addZero(randomInteger(1, 30))+".jpg')", //18
+    "url('assets/images/evening/"+addZero(randomInteger(1, 30))+".jpg')", //19
+    "url('assets/images/evening/"+addZero(randomInteger(1, 30))+".jpg')", //20
+    "url('assets/images/evening/"+addZero(randomInteger(1, 30))+".jpg')", //21
+    "url('assets/images/evening/"+addZero(randomInteger(1, 30))+".jpg')", //22
+    "url('assets/images/evening/"+addZero(randomInteger(1, 30))+".jpg')"  //23
 ]
 
 //Show time
