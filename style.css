@@ -40,11 +40,11 @@ body {
     align-items: center;
     text-align: center;
     width: min(80%, 1000px);
-    background-color: rgba(26, 26, 26, 0.67);
+    background-color: rgba(26, 26, 26, 0.50);
     /* background: linear-gradient(0deg, rgba(46,32,62,0.5158438375350141) 0%, rgba(255,143,74,0.5046393557422969) 100%); */
     border-radius: 20px;
     box-sizing: border-box;
-    padding: 50px 20px 90px;
+    padding: 50px 20px 100px;
     margin: 20px 0;
     position: relative;
 }
@@ -54,30 +54,30 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    filter: blur(4px);
     position: absolute;
     top: 0;
     left: 0;
-    backdrop-filter: blur(0.2px);
+    backdrop-filter: blur(3px);
     z-index: -1;
     border-radius: 20px;
 }
 
 .weather {
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 300;
     min-height: 98px;
 }
 
 .weather__city {
     font-size: 24px;
+    font-weight: 400;
     margin-bottom: 10px;
-    font-weight: normal;
     min-width: 100px;
 }
 
 .weather__temperature {
+    font-size: 20px;
     display: inline-block;
     margin-right: 5px;
     margin-bottom: 5px;
@@ -85,27 +85,21 @@ body {
 
 .weather__description {
     display: inline-block;
-    font-size: 14px;
     margin-bottom: 5px;
 }
 
 .weather__humidity {
-    font-size: 14px;
     margin-bottom: 5px;
 }
 
-.weather__wind {
-    font-size: 14px;
-}
-
 .weather__error-message {
-    font-size: 14px;
     margin-top: -15px;
     margin-bottom: 15px;
 }
 
 .date {
     font-size: 24px;
+    font-weight: 400;
     margin-bottom: 16px;
 }
 
@@ -121,7 +115,8 @@ body {
 }
 
 .greeting {
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: 400;
     margin-bottom: 25px;
     display: flex;
     flex-wrap: wrap;
@@ -139,13 +134,14 @@ body {
     font-family: 'Bad Script', cursive;
     font-size: 20px;
     margin-bottom: 10px;
-    width: 70%;
+    width: 80%;
     text-align: right;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    min-height: 135px;
+    min-height: 143px;
+    transition: 1s ease-in-out 300ms;
 }
 
 .quote__btn {
@@ -184,9 +180,9 @@ body {
 }
 
 .aim {
-    opacity: 0.9;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 .aim__question {
@@ -195,7 +191,6 @@ body {
 
 .aim__answer {
     min-width: 100px;
-    margin-bottom: 40px;
     max-width: 70%;
     margin-right: auto;
     margin-left: auto;
@@ -208,6 +203,7 @@ body {
     padding: 9px 14px;
     border: none;
     border-radius: 5px;
+    font-size: 14px;
     font-family: 'Comfortaa', sans-serif;
     color: #fff;
     font-weight: 700;

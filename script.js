@@ -346,13 +346,17 @@ const author = document.querySelector('.quote__author');
 const btnQuote = document.querySelector('.quote__btn');
 
 async function getQuote() {
-    const url = `https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=ru`;
+    //const url = `https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=ru`;
+    const url =  `https://quote-garden.herokuapp.com/api/v2/quotes/random`;
     const res = await fetch(url);
 
     if(res.ok){
         const data = await res.json();
-        quote.textContent = data.quoteText;
-        author.textContent = data.quoteAuthor;
+        //quote.textContent = data.quoteText;
+        //author.textContent = data.quoteAuthor;
+        quote.textContent = data.quote.quoteText;
+        author.textContent = data.quote.quoteAuthor;
+
     } else {
         quote.textContent = "Что-то пошло не так. Попробуй получить цитату позже"
     }
